@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="ico.png" type="image/x-icon">
+    <link rel="shortcut icon" href="ico.png" type="image/x-icon">
+    <title>Portfolio</title>
+    <script>
+        function sendMail() {
+                // Get user's email client ready with pre-filled email
+                var email = "matheus.motizuki@gmail.com";
+                var subject = "Portfolio - Contact";
+                var body = "Hello Matheus,\n\nI saw your portfolio and would like to connect.\n\nBest regards,";
+                var mailtoLink = "mailto:" + email + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+                window.location.href = mailtoLink;
+        }
+
+        /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginRight = "250px";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        }
+
+        /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginRight = "0";
+            document.body.style.backgroundColor = "white";
+        }
+
+        function linkedin() {
+            window.open("https://www.linkedin.com/in/matheus-motizuki/", "_blank");
+        }
+
+        function github() {
+            window.open("https://www.github.com/matheusmotizuki/", "_blank");
+        }
+
+        function enfasize() {
+            // TODO: later add this
+        }
+    </script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            transition: background-color .5s;
+        }
+
+        .initial_holder {
+            display: flex;
+            width: 100%;
+            min-height: 100vh;
+        }
+
+        .second_holder{
+            display: flex;
+            width: 100%;
+            min-height: 100vh;
+            background-color: #222222;
+        }
+
+        .third_holder{
+            display: flex;
+            width: 100%;
+            min-height: 100vh;
+        }
+
+        .about_me {
+            display: flex;
+            position: relative;
+            width: 80%;
+            margin-left: auto;
+            margin-right: 5%;
+            align-items: center;
+            justify-content: space-between;
+            color: white;
+            padding: 25px;
+            align-self: center;
+            transition: width 0.5s;
+        }
+
+        .about_me .jp_holder {
+            background-color: #e8d9b7;
+            color: #3a2a00;
+            display: flex;
+            width: 25%;
+            padding: 20px;
+            border: 1px solid #a89265;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+            border-radius: 5px;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23d0b978' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+            font-family: 'Noto Sans JP', serif;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about_me .jp {
+            width: 100%;
+            text-align: left;
+            font-size: 1.2rem;
+            font-family: 'Noto Sans JP', sans-serif;
+            font-weight: 400;
+            line-height: 1.5em;
+        }
+
+        .about_me .en {
+            width: 45%;
+            text-align: right;
+            font-size: 1.2rem;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: 400;
+        }
+
+        nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: fit-content;
+            padding: 0.8%;
+        }
+
+        nav span{
+            color: #141414;
+            font-size: 1rem;
+            font-family: monospace;
+            font-weight: 400;
+            font-style: normal;
+            margin: 0;
+        }
+
+        nav .name{
+            font-variant: small-caps;
+            letter-spacing: 0.5rem;
+        }
+
+        nav button{
+            background-color: transparent;
+            border: none;
+            color: white;
+            font-family: monospace;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 1rem;
+            cursor: pointer;
+            color: #0000FF;
+            text-decoration: underline;
+        }
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            border-bottom: 1px dotted black;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            top: 125%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .tooltip .tooltiptext::after {
+            content: "";
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent #555 transparent;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .main_text{
+            position: absolute; 
+            bottom: 2%; 
+            left: 2%;
+        }
+
+        .main_text h1 {
+            color: #141414;
+            font-size: 10rem;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 0;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .initial_holder {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                min-height: 100vh;
+            }
+            .main_text {
+                position: relative;
+                bottom: auto;
+                left: auto;
+                margin-top: 10%;
+                text-align: center;
+            }
+            .main_text h1 {
+                font-size: 6rem;
+            }
+       }
+
+        @media screen and (max-width: 768px) {
+            .main_text h1 {
+                font-size: 5rem;
+            }
+            .about_me {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin-top: 0;
+            }
+            .about_me .jp_holder {
+                width: fit-content;
+                margin-right: 50%;
+            }
+            .about_me .jp {
+                width: 100%;
+            }
+            .about_me .en {
+                width: 100%;
+            }
+            .about_me {
+                margin-top: 10%;
+            }
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            background-color: #222222;
+            overflow-x: hidden;
+            padding-top: 60px;
+            transition: 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        /* The navigation menu links */
+        .sidenav a {
+            font-family: 'Roboto', 'Open Sans', Arial, sans-serif;
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        /* When you mouse over the navigation links, change their color */
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        /* Position and style the close button (top right corner) */
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        #main {
+            transition: margin-right .5s;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {padding-top: 15px;}
+            .sidenav a {font-size: 18px;}
+        }
+
+        .second_container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .image_holder {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            width: 100%;
+            margin-top: auto;
+        }
+
+        .links {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-end;
+            justify-content: flex-start;
+            margin: 0 0 2% 5%;
+        }
+
+        .links p {
+            margin-top: 10px;
+            margin-right: 3rem;
+            color: #141414;
+            font-size: 3rem;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .links p:hover {
+            text-decoration: underline;
+            transform: translateY(-5px);
+        }
+
+        @media screen and (max-width: 768px) {
+            .links {
+                font-size: 2rem;
+            }
+            .links p {
+                margin-bottom: 1rem;
+            }
+        }
+
+        .wid img{
+            margin: 0;
+            padding: 0;
+        }
+
+        .bento{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            height: 80vh;
+            margin-left: auto;
+            margin-right: auto;
+            align-self: center;
+        }
+
+        .waviy {
+            position: relative;
+        }
+        .waviy span {
+            position: relative;
+            display: inline-block;
+            font-size: 40px;
+            color: #141414;
+            text-transform: uppercase;
+            animation: flip 6s infinite;
+            animation-delay: calc(.2s * var(--i))
+        }
+
+        @keyframes flip {
+            0%, 80% {
+                transform: rotateY(360deg) 
+            }
+        }
+
+        .footer{
+            background-color: #141414;
+            display: flex;
+            width: 100%;
+            min-height: fit-content;
+        }
+
+        .footer_holder{
+            background-color: #141414;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 2rem;
+            gap: 2rem;
+        }
+
+        .footer_text {
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 1.2rem;
+            margin: 0;
+        }
+
+        .footer_holder button {
+            padding: 8px 16px;
+            background: white;
+            color: #0000FF;
+            border: none;
+            border-radius: 25px;
+            height: 100%;
+            font-size: 1rem;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.5s;
+        }
+
+        .footer_holder button:hover {
+            background-color: #0000FF;
+            color: white;
+        }
+
+        .button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .button span:after {
+            content: '✉️';
+            position: absolute;
+            opacity: 0;
+            bottom: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+        .button:hover span {
+            padding-right: 25px;
+        }
+
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#second_holder" onclick="closeNav(); document.querySelector('#second_holder').scrollIntoView({behavior: 'smooth', block: 'start'}); return false;">about</a>
+        <a href="#third_holder" onclick="closeNav(); document.querySelector('#third_holder').scrollIntoView({behavior: 'smooth', block: 'start'}); return false;">info</a>
+        <a href="#footer" onclick="closeNav(); document.querySelector('#footer').scrollIntoView({behavior: 'smooth', block: 'start'}); return false;">contact</a>
+
+    </div>
+    <section id="main">
+        <div class="initial_holder">
+            <nav>
+                <div>
+                    <div class="tooltip">
+                        <span id="name" class="name">suzuki</span>
+                        <span class="tooltiptext">That's my nickname!</span>
+                    </div>
+                    <span>*</span>
+                </div>
+                <span>portfolio</span>
+                <button onclick="openNav()">menu</button>
+            </nav>
+            <div class="main_text">
+                <h1>Software<br>Developer</h1>
+            </div>
+        </div>
+    </section>
+    <section id="second_holder" class="second_holder">
+        <div class="second_container">
+            <div class="about_me">
+                <div class="jp_holder">
+                    <p class="jp">
+                        私はソフトウェア開発者で、<br>
+                        golang、c++、rust、pythonを<br>
+                        専門としています。<br>
+                        学ぶことが大好きで、<br>常に新しい挑戦を求めています。
+                    </p>
+                </div>
+                <p class="en">
+                    I'm a software developer,<br>
+                    with expertise in<br>
+                    golang, c++, rust and python.<br>
+                    I love to learn, <br>I`m always looking for new challenges.
+                </p>
+            </div>
+            <div class="image_holder">
+                <img src="wave.png" width="100%" alt="wave">
+            </div>
+        </div>
+    </section>
+    <section id="third_holder" class="third_holder">
+        <div class="links">
+            <div class="wid">
+                <img src="arrow.svg" alt="arrow" width="70" height="70">
+                <p onclick="github()">
+                    What<br> I<br> Do.<br>
+                </p>
+            </div>
+            <div class="wai">
+                <img src="squares.svg" alt="arrow" width="70" height="70">
+                <p onclick="linkedin()">
+                    Who<br> am<br> I.<br>
+                </p>
+            </div>
+            <div class="mw">
+                <img src="arrow.svg" alt="arrow" width="60" height="60">
+                <p onclick="enfasize()">
+                    My<br> Work.<br>
+                </p>
+            </div>
+        </div>
+        <div class="bento">
+            <div class="waviy">
+                <span style="--i:1">c</span>
+                <span style="--i:2">o</span>
+                <span style="--i:3">m</span>
+                <span style="--i:4">i</span>
+                <span style="--i:5">n</span>
+                <span style="--i:6">g</span>
+                <span style="--i:7">s</span>
+                <span style="--i:8">o</span>
+                <span style="--i:8">o</span>
+                <span style="--i:8">n</span>
+                <span style="--i:8">.</span>
+               </div>
+        </div>
+    </section>
+    <section id="footer" class="footer">
+        <div class="footer_holder">
+            <p class="footer_text">
+                Like what you see?<br>
+                Contact me.
+            </p>
+            <button onclick="sendMail()" class="button"><span>Mail</span></button>
+        </div>
+    </section>
+</body>
+</html>
